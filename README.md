@@ -13,19 +13,19 @@ Có thể triển khai self-host đơn giản trên Ubuntu
 
 Tích hợp được với Kubernetes, Docker, Hashicorp Vault...
 #Hướng dẫn cài đặt Smallstep CA + Web UI
-✅ Bước 1: Cài đặt Smallstep CA
+- Bước 1: Cài đặt Smallstep CA
 curl -fsSL https://github.com/smallstep/cli/releases/latest/download/step-cli_linux_amd64.tar.gz | tar xzf - -C /usr/local/bin --strip-components=1
 curl -fsSL https://github.com/smallstep/certificates/releases/latest/download/step-ca_linux_amd64.tar.gz | tar xzf - -C /usr/local/bin --strip-components=1
-✅ Bước 2: Khởi tạo CA
+- Bước 2: Khởi tạo CA
 step ca init
 Trả lời các câu hỏi như:
 Tên CA
 Password bảo vệ khóa
 Đường dẫn lưu CA data
 Sau khi hoàn tất sẽ có thư mục chứa dữ liệu CA (mặc định: ~/.step).
-✅ Bước 3: Khởi chạy CA server
+- Bước 3: Khởi chạy CA server
 step-ca $(step path)/config/ca.json
-✅ Bước 4: Cài đặt Smallstep Web UI (Dashboard)
+- Bước 4: Cài đặt Smallstep Web UI (Dashboard)
 Cài đặt dashboard (dạng SPA React)
 git clone https://github.com/smallstep/dashboard.git
 cd dashboard
